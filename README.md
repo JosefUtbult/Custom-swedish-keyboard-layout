@@ -27,7 +27,7 @@ xkb_symbols "us" {
 };
 ```
 ## Add the variant to rules
-In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions of all the different keybord layouts and the keymaps. Search for the following.
+In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions of all the different keyboard layouts and the keymaps. Search for the following.
 ```
 <configItem>
         <name>se</name>
@@ -49,8 +49,11 @@ On the line over the first variant, insert the following.
 </variant>
 ```
 
-## Reload the keybord service
-Reload the keybord service with `sudo service keyboard-setup restart`
+## Reload the keyboard service
+Reload the keyboard service with `sudo service keyboard-setup restart`
 
 ## Select the layout in settings
-Go to System settings &rarr;
+Go to System settings &rarr; Keyboard &rarr; Layouts (At least in Linux mint, but it shouldnt be inpossible to find it in another distro). There, add a layout and search for `Swedish (US, with Swedish letters)`.
+
+# Prologue
+Hope this helps someone that has some trouble with their swedish letters. It will at least help me the next time I'll have to do it.
