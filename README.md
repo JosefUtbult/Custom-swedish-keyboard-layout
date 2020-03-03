@@ -53,4 +53,4 @@ On the line over the first variant, insert the following.
 Reload the keybord service with `sudo service keyboard-setup restart`
 
 ## Select the layout in settings
-Go to System settings &rarr 
+Go to System settings &rarr;
