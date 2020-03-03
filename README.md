@@ -27,19 +27,7 @@ xkb_symbols "us" {
 };
 ```
 ## Add the variant to rules
-In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions of all the different keyboard layouts and the keymaps. Search for the following.
-```
-<configItem>
-        <name>se</name>
-        <shortDescription>sv</shortDescription>
-        <description>Swedish</description>
-        <languageList>
-          <iso639Id>swe</iso639Id>
-        </languageList>
-      </configItem>
-      <variantList>
-```
-On the line over the first variant, insert the following.
+In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions of all the different keyboard layouts and the keymaps. Search for `<name>se</name>` and insert the following after `<variantList>`
 ```
 <variant>
   <configItem>
