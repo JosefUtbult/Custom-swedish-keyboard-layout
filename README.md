@@ -44,4 +44,4 @@ Reload the keyboard service with `sudo service keyboard-setup restart`
 Go to System settings &rarr; Keyboard &rarr; Layouts (At least in Linux mint, but it shouldnt be inpossible to find it in another distro). There, add a layout and search for `Swedish (US, with Swedish letters)`.
 
 # Prologue
-Hope this helps someone that has some trouble with their swedish letters. It will at least help me the next time I'll have to do it.
+There you go! Hope this helps someone that has some trouble with their swedish letters. It will at least help me the next time I'll have to do it.
