@@ -1,5 +1,5 @@
 # Custom swedish keyboard layout
-This is a tutorial on how to add a custom swedish keyboard layout to Linux. It uses the standard american keyboard layout but with six additional characters.
+This is a tutorial on how to add a custom swedish keymap layout to Linux. It uses the standard american keyboard layout but with six additional characters.
 | Character     | Key combination     |
 | ------------- |:-------------------:|
 | å             | Alt Gr + [          |
@@ -26,3 +26,31 @@ xkb_symbols "us" {
     include "level3(ralt_switch)"
 };
 ```
+## Add the variant to rules
+In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions of all the different keybord layouts and the keymaps. Search for the following.
+```
+<configItem>
+        <name>se</name>
+        <shortDescription>sv</shortDescription>
+        <description>Swedish</description>
+        <languageList>
+          <iso639Id>swe</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+```
+On the line over the first variant, insert the following.
+```
+<variant>
+  <configItem>
+    <name>us</name>
+    <description>Swedish (US, with Swedish letters)</description>
+  </configItem>
+</variant>
+```
+
+## Reload the keybord service
+Reload the keybord service with `sudo service keyboard-setup restart`
+
+## Select the layout in settings
+Go to System settings &rarr 
