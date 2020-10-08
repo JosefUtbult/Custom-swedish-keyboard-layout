@@ -37,11 +37,26 @@ In the file `/usr/share/X11/xkb/rules/evdev.xml` you have the rules/descriptions
 </variant>
 ```
 
-## Reload the keyboard service
+## Reload the keyboard service - Ubuntu
 Reload the keyboard service with `sudo service keyboard-setup restart`
 
-## Select the layout in settings
+## Select the layout in settings - Ubuntu
 Go to System settings &rarr; Keyboard &rarr; Layouts (At least in Linux mint, but it shouldnt be inpossible to find it in another distro). There, add a layout and search for `Swedish (US, with Swedish letters)`.
+
+## Select the layout - Arch
+Run the following command to try the keymap out.
+```setxkbmap se -variant us```
+
+## Set persistant keymap
+In ``/etc/X11/xorg.conf.d`` there should be a .conf file to setup input stuff. Add the following in the bottom of that.
+```
+Section "InputClass"
+    Identifier "system-keyboard"
+    MatchIsKeyboard "on"
+    Option "XkbLayout" "se"
+    Option "XkbVariant" "us"
+EndSection
+```
 
 # Prologue
 There you go! Hope this helps someone that has some trouble with their swedish letters. It will at least help me the next time I'll have to do it.
