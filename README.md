@@ -47,7 +47,7 @@ Go to System settings &rarr; Keyboard &rarr; Layouts (At least in Linux mint, bu
 Run the following command to try the keymap out.
 ```setxkbmap se -variant us```
 
-## Set persistant keymap
+## Set persistant keymap - Arch
 In ``/etc/X11/xorg.conf.d`` there should be a .conf file to setup input stuff. Add the following in the bottom of that.
 ```
 Section "InputClass"
